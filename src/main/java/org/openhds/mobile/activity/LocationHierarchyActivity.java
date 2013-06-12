@@ -11,11 +11,10 @@ import android.widget.Toast;
 
 public class LocationHierarchyActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 	
-
-	public static String INTEROP_SERVER = "interopserver";
-    public static String OPENHDS_KEY_SERVER = "openhdsserver";
-    public static String OPENHDS_KEY_USERNAME = "openhdsusername";
-    public static String OPENHDS_KEY_PASSWORD = "openhdspassword";
+	public static String HIERARCHY_1 = "hierarchy1";
+    public static String HIERARCHY_2 = "hierarchy2";
+    public static String HIERARCHY_3 = "hierarchy3";
+    public static String HIERARCHY_4 = "hierarchy4";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
