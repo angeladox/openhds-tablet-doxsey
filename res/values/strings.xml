@@ -47,6 +47,21 @@
     <string name="username">OpenHDS Username</string>
     <string name="view_forms_btn">View My Forms</string>
 	<string name="see_list">See List</string>
+	
+	<!-- New hierarchy strings -->
+	<string name="configureHierarchies">Configure Hierarchies</string>
+	<string name="default_hierarchy1">Hierarchy 1</string>
+    <string name="default_hierarchy2">Hierarchy 2</string>
+    <string name="default_hierarchy3">Hierarchy 3</string>
+    <string name="default_hierarchy4">Hierarchy 4</string>
+	<string name="hierarchy_error">Sorry, invalid hierarchy!</string>
+    <string name="hierarchy1Title">Hierarchy 1</string>
+    <string name="hierarchy2Title">Hierarchy 2</string>
+    <string name="hierarchy3Title">Hierarchy 3</string>
+    <string name="hierarchy4Title">Hierarchy 4</string>
+    <string name="changeHierarchy">Change Hierarchy</string>
+    
+    <!-- Old hierarchy labels -->
     <string name="hierarchy1_lbl">District:</string>
     <string name="hierarchy1_hint_lbl">District External Id</string>
     <string name="hierarchy2_lbl">Village:</string>

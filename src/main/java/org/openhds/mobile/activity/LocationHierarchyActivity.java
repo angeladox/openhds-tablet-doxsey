@@ -19,63 +19,38 @@ public class LocationHierarchyActivity extends PreferenceActivity implements OnS
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.layout.preferences);
-        setTitle(getString(R.string.app_name) + " > " + getString(R.string.configureDatabase));
+        addPreferencesFromResource(R.layout.location_hierarchies);
+        setTitle(getString(R.string.app_name) + " > " + getString(R.string.configureHierarchies));
              
-        updateInterop(INTEROP_SERVER);
-        updateServer(OPENHDS_KEY_SERVER);
-        updateUsername(OPENHDS_KEY_USERNAME);
-        updatePassword(OPENHDS_KEY_PASSWORD);
+        updateHierarchy(HIERARCHY_1);
+        updateHierarchy(HIERARCHY_2);
+        updateHierarchy(HIERARCHY_3);
+        updateHierarchy(HIERARCHY_4);
     }
     
-    private void updateInterop(String server) {
-        EditTextPreference etp = (EditTextPreference) this.getPreferenceScreen().findPreference(server);
+    private void updateHierarchy(String hierarchy) {
+        EditTextPreference etp = (EditTextPreference) this.getPreferenceScreen().findPreference(hierarchy);
         
         String s = etp.getText().trim();
 
-        if (UrlUtils.isValidUrl(s)) {
+        if (!s.isEmpty()) {
             etp.setText(s);
             etp.setSummary(s);
         } 
         else {
             etp.setText((String) etp.getSummary());
-            Toast.makeText(getApplicationContext(), getString(R.string.url_error), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.hierarchy_error), Toast.LENGTH_SHORT).show();
         }
-    }
-    
-    private void updateServer(String server) {
-        EditTextPreference etp = (EditTextPreference) this.getPreferenceScreen().findPreference(server);
-        
-        String s = etp.getText().trim();
-
-        if (UrlUtils.isValidUrl(s)) {
-            etp.setText(s);
-            etp.setSummary(s);
-        } 
-        else {
-            etp.setText((String) etp.getSummary());
-            Toast.makeText(getApplicationContext(), getString(R.string.url_error), Toast.LENGTH_SHORT).show();
-        }
-    }
-    
-    private void updateUsername(String username) {
-        EditTextPreference etp = (EditTextPreference) this.getPreferenceScreen().findPreference(username);
-        etp.setSummary(etp.getText());
-    }
-    
-    private void updatePassword(String password) {
-        EditTextPreference etp = (EditTextPreference) this.getPreferenceScreen().findPreference(password);
-        etp.setText(etp.getText());
     }
     
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-		if (key.equals(INTEROP_SERVER)) 
-			updateServer(INTEROP_SERVER);
-		else if (key.equals(OPENHDS_KEY_SERVER)) 
-			updateServer(OPENHDS_KEY_SERVER);
-        else if (key.equals(OPENHDS_KEY_USERNAME)) 
-            updateUsername(OPENHDS_KEY_USERNAME);
-        else if (key.equals(OPENHDS_KEY_PASSWORD)) 
-            updatePassword(OPENHDS_KEY_PASSWORD);
+		if (key.equals(HIERARCHY_1)) 
+			updateHierarchy(HIERARCHY_1);
+		else if (key.equals(HIERARCHY_2)) 
+			updateHierarchy(HIERARCHY_2);
+        else if (key.equals(HIERARCHY_3)) 
+        	updateHierarchy(HIERARCHY_3);
+        else if (key.equals(HIERARCHY_4)) 
+        	updateHierarchy(HIERARCHY_4);
 	}
 }

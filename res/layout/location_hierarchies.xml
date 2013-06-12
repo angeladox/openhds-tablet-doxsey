@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+     <EditTextPreference
+    		android:id="@+id/hierarchy1"
+            android:key="hierarchy1"
+            android:defaultValue="@string/default_hierarchy1"
+            android:title="@string/hierarchy1Title"
+            android:dialogTitle="@string/changeHierarchy" />
+     
+     <EditTextPreference
+    		android:id="@+id/hierarchy2"
+            android:key="hierarchy2"
+            android:defaultValue="@string/default_hierarchy2"
+            android:title="@string/hierarchy2Title"
+            android:dialogTitle="@string/changeHierarchy" />
+            
+     <EditTextPreference
+    		android:id="@+id/hierarchy3"
+            android:key="hierarchy3"
+            android:defaultValue="@string/default_hierarchy3"
+            android:title="@string/hierarchy3Title"
+            android:dialogTitle="@string/changeHierarchy" />
+            
+     <EditTextPreference
+    		android:id="@+id/hierarchy4"
+            android:key="hierarchy4"
+            android:defaultValue="@string/default_hierarchy4"
+            android:title="@string/hierarchy4Title"
+            android:dialogTitle="@string/changeHierarchy" />
+
+</PreferenceScreen>
