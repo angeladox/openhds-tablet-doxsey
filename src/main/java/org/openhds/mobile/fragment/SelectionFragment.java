@@ -1,6 +1,8 @@
 package org.openhds.mobile.fragment;
 
 import org.openhds.mobile.R;
+import org.openhds.mobile.activity.LocationHierarchyActivity;
+import org.openhds.mobile.activity.ServerPreferencesActivity;
 import org.openhds.mobile.model.Individual;
 import org.openhds.mobile.model.Location;
 import org.openhds.mobile.model.LocationHierarchy;
@@ -12,7 +14,9 @@ import org.openhds.mobile.model.StateMachine.StateListener;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,6 +52,8 @@ public class SelectionFragment extends Fragment implements OnClickListener {
             roundNumberText, roundStartDateText, roundEndDateText, locationNameText, locationExtIdText,
             locationLatitudeText, locationLongitudeText, individualFirstNameText, individualLastNameText,
             individualExtIdText, individualDobText;
+    
+    String hierarchy1, hierarchy2, hierarchy3, hierarchy4;
 
     @Override
     public void onAttach(Activity activity) {
@@ -57,7 +63,13 @@ public class SelectionFragment extends Fragment implements OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.selection, container, false);
+    	Activity thisActivity = this.getActivity();
+    	SharedPreferences sp = thisActivity.getPreferences(0);
+		hierarchy1 = sp.getString(LocationHierarchyActivity.HIERARCHY_1, getString(R.id.hierarchy1));
+		hierarchy2 = sp.getString(LocationHierarchyActivity.HIERARCHY_2, getString(R.id.hierarchy2));
+		hierarchy3 = sp.getString(LocationHierarchyActivity.HIERARCHY_3, getString(R.id.hierarchy3));
+		hierarchy4 = sp.getString(LocationHierarchyActivity.HIERARCHY_4, getString(R.id.hierarchy4));
+    	View view = inflater.inflate(R.layout.selection, container, false);
         bindViews(view);
         return view;
     }
@@ -66,6 +78,7 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         loginGreetingText = (TextView) view.findViewById(R.id.loginGreetingText);
 
         hierarchy1Btn = (Button) view.findViewById(R.id.hierarchy1Btn);
+        hierarchy1Btn.setText(hierarchy1);
         hierarchy1Btn.setOnClickListener(this);
         hierarchy1NameText = (TextView) view.findViewById(R.id.hierarchy1Name);
         hierarchy1ExtIdText = (TextView) view.findViewById(R.id.hierarchy1ExtId);

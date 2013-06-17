@@ -6,7 +6,7 @@
 		android:showAsAction="ifRoom|withText" />
 	<item
 		android:id="@+id/configure_hierarchy"
-		android:title="Configure Location Hierarchy"
+		android:title="Configure Location Hierarchies"
 		android:showAsAction="ifRoom|withText" />
 </menu>
 

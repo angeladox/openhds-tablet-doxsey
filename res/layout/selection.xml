@@ -22,8 +22,8 @@
 	        android:layout_width="150dp"
 	        android:layout_height="wrap_content"
 	        android:layout_marginTop="10dp"
-	        android:layout_marginLeft="20dp"
-	        android:text="Select District" /> 
+	        android:layout_marginLeft="20dp"/> 
+<!-- 	        android:text="@+id/hierarchy1" --> 
 	    
 	    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	            android:layout_width="fill_parent"
@@ -67,8 +67,8 @@
 	        android:id="@+id/hierarchy2Btn"
 	        android:layout_width="150dp"
 	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="20dp"
-	        android:text="Select Village" />
+	        android:layout_marginLeft="20dp"/>
+	        <!-- android:text="Select Village"  -->
 	    
 	     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	            android:layout_width="fill_parent"
@@ -112,8 +112,8 @@
             android:id="@+id/hierarchy3Btn"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="Select Subvillage" />
+            android:layout_marginLeft="20dp"/>
+            <!-- android:text="Select Subvillage"  -->
         
          <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
@@ -157,8 +157,8 @@
 	        android:id="@+id/hierarchy4Btn"
 	        android:layout_width="150dp"
 	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="20dp"
-	        android:text="Select Parent Location" />
+	        android:layout_marginLeft="20dp"/>
+	        <!-- android:text="Select Parent Location"  -->
 	    
 	     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	            android:layout_width="fill_parent"

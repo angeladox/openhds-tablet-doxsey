@@ -1,7 +1,6 @@
 package org.openhds.mobile.activity;
 
 import org.openhds.mobile.R;
-import org.openhds.mobile.utilities.UrlUtils;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
@@ -15,13 +14,16 @@ public class LocationHierarchyActivity extends PreferenceActivity implements OnS
     public static String HIERARCHY_2 = "hierarchy2";
     public static String HIERARCHY_3 = "hierarchy3";
     public static String HIERARCHY_4 = "hierarchy4";
-    
+    /*Upon rendering of the Location Hierarchy Activity, the user should be prompted to 
+     * enter the number of location levels they would like for the hierarchy scheme. When
+     * a number is chosen, that number of text field input boxes should be supplied to
+     * receive input.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.layout.location_hierarchies);
         setTitle(getString(R.string.app_name) + " > " + getString(R.string.configureHierarchies));
-             
         updateHierarchy(HIERARCHY_1);
         updateHierarchy(HIERARCHY_2);
         updateHierarchy(HIERARCHY_3);
