@@ -47,8 +47,9 @@ public class SelectionFragment extends Fragment implements OnClickListener {
 
     private Button hierarchy1Btn, hierarchy2Btn, hierarchy3Btn, hierarchy4Btn, locationBtn, roundBtn, individualBtn;
 
-    private TextView loginGreetingText, hierarchy1NameText, hierarchy1ExtIdText, hierarchy2NameText,
-            hierarchy2ExtIdText, hierarchy3NameText, hierarchy3ExtIdText, hierarchy4NameText, hierarchy4ExtIdText,
+    private TextView loginGreetingText, hierarchy1NameText, hierarchy1ExtIdText, hierarchy1Header, hierarchy2NameText,
+            hierarchy2ExtIdText, hierarchy2Header,hierarchy3NameText, hierarchy3ExtIdText, hierarchy3Header,
+            hierarchy4NameText, hierarchy4ExtIdText, hierarchy4Header,
             roundNumberText, roundStartDateText, roundEndDateText, locationNameText, locationExtIdText,
             locationLatitudeText, locationLongitudeText, individualFirstNameText, individualLastNameText,
             individualExtIdText, individualDobText;
@@ -76,15 +77,16 @@ public class SelectionFragment extends Fragment implements OnClickListener {
 
     private void bindViews(View view) {
         loginGreetingText = (TextView) view.findViewById(R.id.loginGreetingText);
-
         hierarchy1Btn = (Button) view.findViewById(R.id.hierarchy1Btn);
         hierarchy1Btn.setText(hierarchy1);
         hierarchy1Btn.setOnClickListener(this);
+        hierarchy1Header.setText(hierarchy1+":");
         hierarchy1NameText = (TextView) view.findViewById(R.id.hierarchy1Name);
         hierarchy1ExtIdText = (TextView) view.findViewById(R.id.hierarchy1ExtId);
 
         hierarchy2Btn = (Button) view.findViewById(R.id.hierarchy2Btn);
         hierarchy2Btn.setOnClickListener(this);
+        hierarchy2Header.setText(hierarchy2+":");
         hierarchy2NameText = (TextView) view.findViewById(R.id.hierarchy2Name);
         hierarchy2ExtIdText = (TextView) view.findViewById(R.id.hierarchy2ExtId);
 
@@ -92,11 +94,13 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         hierarchy3Btn.setOnClickListener(this);
         hierarchy3NameText = (TextView) view.findViewById(R.id.hierarchy3Name);
         hierarchy3ExtIdText = (TextView) view.findViewById(R.id.hierarchy3ExtId);
+        hierarchy3Header.setText(hierarchy3+":");
 
         hierarchy4Btn = (Button) view.findViewById(R.id.hierarchy4Btn);
         hierarchy4Btn.setOnClickListener(this);
         hierarchy4NameText = (TextView) view.findViewById(R.id.hierarchy4Name);
         hierarchy4ExtIdText = (TextView) view.findViewById(R.id.hierarchy4ExtId);
+        hierarchy4Header.setText(hierarchy4+":");
 
         locationBtn = (Button) view.findViewById(R.id.locationBtn);
         locationBtn.setOnClickListener(this);

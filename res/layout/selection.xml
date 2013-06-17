@@ -30,10 +30,10 @@
 	            android:layout_height="wrap_content">
 	        <TableRow> 
 	            <TextView
+	                android:id="@+id/hierarchy1Header"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:layout_marginLeft="20dp"
-			        android:text="District:"
 			        android:textAppearance="?android:attr/textAppearanceSmall"  />
 	
 		    	<TextView
@@ -75,10 +75,10 @@
 	            android:layout_height="wrap_content">  
 	        <TableRow> 
 	            <TextView
+	                android:id="@+id/hierarchy2Header"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:layout_marginLeft="20dp"
-			        android:text="Village:"
 			        android:textAppearance="?android:attr/textAppearanceSmall"  />
 	
 		    	<TextView
@@ -120,10 +120,10 @@
                 android:layout_height="wrap_content">  
             <TableRow> 
                 <TextView
+                    android:id="@+id/hierarchy3Header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="Subvillage:"
                     android:textAppearance="?android:attr/textAppearanceSmall"  />
     
                 <TextView
@@ -165,10 +165,10 @@
 	            android:layout_height="wrap_content">  
 	        <TableRow> 
 	            <TextView
+	                android:id="@+id/hierarchy4Header"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:layout_marginLeft="20dp"
-			        android:text="Parent Location:"
 			        android:textAppearance="?android:attr/textAppearanceSmall"  />
 	
 		    	<TextView
