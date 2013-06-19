@@ -3,6 +3,13 @@
     android:layout_height="wrap_content">
 
      <EditTextPreference
+    		android:id="@+id/numHierarchies"
+            android:key="numHierarchies"
+            android:defaultValue="@integer/default_numHierarchies"
+            android:title="@string/numHierarchiesTitle"
+            android:dialogTitle="@string/changeNumHierarchy" />
+     
+     <EditTextPreference
     		android:id="@+id/hierarchy1"
             android:key="hierarchy1"
             android:defaultValue="@string/default_hierarchy1"
