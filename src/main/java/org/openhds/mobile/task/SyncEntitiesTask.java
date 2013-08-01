@@ -144,22 +144,22 @@ public class SyncEntitiesTask extends AsyncTask<Void, Integer, Boolean> {
             processUrl(baseurl + API_PATH + "/locationhierarchies");
 
             entity = Entity.LOCATION;
-            processUrl(baseurl + API_PATH + "/locations/cached");
+            processUrl(baseurl + API_PATH + "/locations");///cached");
 
             entity = Entity.ROUND;
             processUrl(baseurl + API_PATH + "/rounds");
 
              entity = Entity.VISIT;
-             processUrl(baseurl + API_PATH + "/visits/cached");
+             processUrl(baseurl + API_PATH + "/visits");///cached");
             
              entity = Entity.RELATIONSHIP;
-             processUrl(baseurl + API_PATH + "/relationships/cached");
+             processUrl(baseurl + API_PATH + "/relationships");///cached");
 
             entity = Entity.INDIVIDUAL;
-            processUrl(baseurl + API_PATH + "/individuals/cached");
+            processUrl(baseurl + API_PATH + "/individuals");///cached");
 
              entity = Entity.SOCIALGROUP;
-             processUrl(baseurl + API_PATH + "/socialgroups/cached");
+             processUrl(baseurl + API_PATH + "/socialgroups");///cached");
         } catch (Exception e) {
             return false;
         }
@@ -179,11 +179,9 @@ public class SyncEntitiesTask extends AsyncTask<Void, Integer, Boolean> {
         resolver.delete(OpenHDS.Individuals.CONTENT_ID_URI_BASE, null, null);
         resolver.delete(OpenHDS.Locations.CONTENT_ID_URI_BASE, null, null);
     }
-
     private void processUrl(String url) throws Exception {
         state = State.DOWNLOADING;
         publishProgress();
-
         httpGet = new HttpGet(url);
         processResponse();
     }

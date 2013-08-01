@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="@id/hierarchy1"
+            android:text="@string/hierarchy1_lbl"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <LinearLayout
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="@id/hierarchy2"
+            android:text="@string/hierarchy2_lbl"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <LinearLayout
@@ -82,12 +82,11 @@
         </LinearLayout>
         
         <TextView
-            android:id="@+id/hierarchy3Lbl"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="@id/hierarchy3"
+            android:text="@string/hierarchy3_lbl"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <LinearLayout
@@ -119,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="@id/hierarchy4"
+            android:text="@string/hierarchy4_lbl"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <LinearLayout

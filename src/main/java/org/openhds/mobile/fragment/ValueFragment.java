@@ -31,7 +31,7 @@ import android.widget.SimpleCursorAdapter;
  */
 public class ValueFragment extends ListFragment implements LoaderCallbacks<Cursor> {
 
-    private static final String START_HIERARCHY_LEVEL_NAME = "Ward";
+    private static final String START_HIERARCHY_LEVEL_NAME = "Country";
     // loader identifiers
     private static final int HIERARCHY_LOADER = 0;
     private static final int REGION_LOADER = 1;
@@ -169,9 +169,15 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
         switch (arg0) {
         case HIERARCHY_LOADER:
             adapter.changeCursorAndColumns(null, HIERARCHY_COLUMNS, VIEW_BINDINGS);
+            Activity thisActivity = getActivity();
+            Uri hierarchyItems = OpenHDS.HierarchyItems.CONTENT_ID_URI_BASE;
+            String hierarchyItemsLevel = OpenHDS.HierarchyItems.COLUMN_HIERARCHY_LEVEL;
+            //CursorLoader(Context context, Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder)
+            //Activity is UpdateActivity
             return new CursorLoader(getActivity(), OpenHDS.HierarchyItems.CONTENT_ID_URI_BASE, null,
                     OpenHDS.HierarchyItems.COLUMN_HIERARCHY_LEVEL + " = ?",
                     new String[] { START_HIERARCHY_LEVEL_NAME }, null);
+            
         case REGION_LOADER:
             adapter.changeCursorAndColumns(null, HIERARCHY_COLUMNS, VIEW_BINDINGS);
             return buildRegionCursorLoader(arg1);

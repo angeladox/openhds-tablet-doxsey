@@ -79,9 +79,6 @@ public class FieldWorkerLoginActivity extends Activity implements OnClickListene
                 Intent i = new Intent(this, ServerPreferencesActivity.class);
                 startActivity(i);
                 return true;
-            case R.id.configure_hierarchy:
-            	Intent j = new Intent(this, LocationHierarchyActivity.class);
-            	startActivity(j);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -139,8 +136,7 @@ public class FieldWorkerLoginActivity extends Activity implements OnClickListene
 	    interface Listener {
 	        void onAuthenticated(FieldWorker fw);
 	    }
-	    
-	    //ContentResolver allows us to perform query on Field Worker entity
+
         public AuthenticateFieldWorker(ContentResolver resolver, String extId, String password, Listener listener) {
 	        this.resolver = resolver;
 	        this.extId = extId;

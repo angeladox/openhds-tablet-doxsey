@@ -4,9 +4,5 @@
 		android:id="@+id/configure_server"
 		android:title="Configure Server"
 		android:showAsAction="ifRoom|withText" />
-	<item
-		android:id="@+id/configure_hierarchy"
-		android:title="Configure Location Hierarchies"
-		android:showAsAction="ifRoom|withText" />
 </menu>
 

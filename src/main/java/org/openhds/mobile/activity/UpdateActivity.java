@@ -148,9 +148,6 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         case R.id.sync_database:
             createSyncDatabaseMenu();
             return true;
-        case R.id.configure_hierarchy:
-        	createHierarchyMenu();
-        	return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -482,14 +479,6 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
      */
     private void createSyncDatabaseMenu() {
         Intent i = new Intent(this, SyncDatabaseActivity.class);
-        startActivity(i);
-    }
-    
-    /**
-     * Creates the 'Configure Location Hierarchy' option in the action menu.
-     */
-    private void createHierarchyMenu() {
-        Intent i = new Intent(this, LocationHierarchyActivity.class);
         startActivity(i);
     }
 
